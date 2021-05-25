@@ -9,6 +9,15 @@
     width: 100%;
     padding: 16px 32px;
     box-sizing: border-box;
+    a {
+        text-decoration: none;
+        font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
+        font-weight: 700;
+        color: $light;
+        &:hover {
+            color: #fff;
+        }
+    }
 }
 
 .transparent {
@@ -38,14 +47,47 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+}
+
+.toggle-menu {
+    display: none;
+}
+
+.toggled-menu {
+    display: flex;
+    a {
+        font-size: 32px;
+    }
+}
+
+.collapsed {
+    display: none;
+}
+
+.toggled {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: $dark;
+    top: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    left: 0;
+    padding: 32px;
+    padding-top: 24px !important;
+    .nav-item {
+        margin-bottom: 12px;
         a {
-            text-decoration: none;
-            font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
-            font-weight: 700;
-            color: $light;
-            &:hover {
-                color: #fff;
-            }
+            width: 100%;
+            display: block;
+        }
+    }
+    .action {
+        a {
+            width: auto;
+            display: inline-block;
+            margin-top: 12px;
         }
     }
 }

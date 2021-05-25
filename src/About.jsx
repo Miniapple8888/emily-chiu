@@ -19,7 +19,8 @@ export class About extends Component {
                 <p>
                 In my free time, I like to code (yes!) on personal projects or hackathons. I also like to draw and play badminton and am a gym enthusiast!
                 </p>
-                <PrimaryButton link="#projects">View projects <FontAwesomeIcon icon={faAngleDoubleDown} /></PrimaryButton>
+                <div className="action"><PrimaryButton link="#projects">View projects <FontAwesomeIcon icon={faAngleDoubleDown} /></PrimaryButton></div>
+                
             </div>
             <div className="profile-img">
                 <div className="img"></div>
