@@ -2,7 +2,6 @@ import {React, Component} from 'react'
 import './About.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons'
-import {Button} from './Button'
 import {PrimaryButton} from './PrimaryButton'
 
 export class About extends Component {

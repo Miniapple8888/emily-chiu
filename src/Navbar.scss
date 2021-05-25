@@ -9,6 +9,7 @@
     width: 100%;
     padding: 16px 32px;
     box-sizing: border-box;
+    z-index: 1000;
     a {
         text-decoration: none;
         font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
@@ -56,8 +57,12 @@
 
 .toggled-menu {
     display: flex;
-    a {
+    button {
+        background: transparent;
+        color: $light;
+        border: none;
         font-size: 32px;
+        cursor: pointer;
     }
 }
 

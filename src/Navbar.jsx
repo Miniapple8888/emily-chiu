@@ -27,17 +27,18 @@ export class Navbar extends Component {
     }
 
     toggleCollapsedState() {
-        console.log("executed")
         const currentCollapsedState = (window.innerWidth <= 700) ? 'collapsed' : 'collapseable'
         const currentToggleMenu = (window.innerWidth <= 700) ? 'toggled-menu' : 'toggle-menu'
         this.setState({collapsedState: currentCollapsedState, toggleMenu: currentToggleMenu})
+        this.toggleClassNavbar()
     }
 
     toggleMenu(e) {
         e.preventDefault()
-        const currentCollapsedState = (this.state.collapsedState == "collapsed toggled") ? "collapsed" : "collapsed toggled"
-        const currentClass = (this.state.collapsedState == "collapsed toggled") ? "transparent" : "solid"
+        const currentCollapsedState = (this.state.collapsedState === "collapsed toggled") ? "collapsed" : "collapsed toggled"
+        const currentClass = (this.state.collapsedState === "collapsed toggled") ? "transparent" : "solid"
         this.setState({collapsedState: currentCollapsedState, currentClass: currentClass })
+        this.toggleClassNavbar()
     }
 
     render() {
@@ -45,7 +46,7 @@ export class Navbar extends Component {
             <div className="brand">
                 <a href="#landing"><h1>EC</h1></a>
             </div>
-            <div className={this.state.toggleMenu}><a href="#" onClick={this.toggleMenu.bind(this)}><FontAwesomeIcon icon={faBars} /></a></div>
+            <div className={this.state.toggleMenu}><button href="#" onClick={this.toggleMenu.bind(this)}><FontAwesomeIcon icon={faBars} /></button></div>
             <div className={this.state.collapsedState}>
                 <div className="nav-item"><a href="#about">About</a></div>
                 <div className="nav-item"><a href="#projects">Projects</a></div>
