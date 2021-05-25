@@ -1,0 +1,25 @@
+@import './App.scss';
+
+#landing {
+    background: $primary;
+    text-align: center;
+    min-height: 600px;
+    height: 100vh;
+    color: $light;
+    padding-top: 18%;
+    box-sizing: border-box;
+    h1 {
+        color: #fff;
+        font-size: 96px;
+    }
+    h4 {
+        font-size: 24px;
+        margin: 12px auto;
+    }
+    .actions .btn {
+        margin: 0 8px;
+    }
+    .social-medias {
+        margin-bottom: 12px;
+    }
+}

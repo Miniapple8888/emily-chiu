@@ -1,0 +1,34 @@
+@import './App.scss';
+
+.project {
+    background-color: #FAFAFA;
+    padding: 32px;
+    color: $dark;
+    border-radius: 32px;
+    flex: 0 0 43%;
+    margin-top: 24px;
+    &:hover {
+        background-color: #fff;
+    }
+    .project-image {
+        height: 318px;
+        width: 100%;
+        background-size: cover;
+        border-radius: 16px;
+        background-position: center;
+    }
+    h2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-top: 12px;
+    }
+    p {
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

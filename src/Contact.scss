@@ -1,0 +1,15 @@
+@import './App.scss';
+
+#contact {
+    background: $primary;
+    color: $light;
+    text-align: center;
+    padding: 64px 0;
+    h4 {
+        font-family: 'Open Sans';
+        margin: 12px 0;
+    }
+    .social-medias .sm-logo {
+        color: $light;
+    }
+}

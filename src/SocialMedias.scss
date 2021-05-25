@@ -1,0 +1,18 @@
+@import './App.scss';
+
+.social-medias {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .sm-logo {
+        margin-right: 18px;
+        margin-left: 18px;
+        display: block;
+        text-decoration: none;
+        color: $light;
+        font-size: 36px;
+        &:hover {
+            color: #fff;
+        }
+    }
+}

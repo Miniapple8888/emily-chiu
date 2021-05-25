@@ -1,0 +1,15 @@
+@import './App.scss';
+
+#footer {
+    background-color: $dark;
+    color: $light;
+    padding: 32px 0;
+    text-align: center;
+    p {
+        font-family: 'Poppins' !important;
+        font-weight: 300;
+        line-height: 1.6;
+        color: #b7b7b7;
+        font-size: 14px;
+    }
+}

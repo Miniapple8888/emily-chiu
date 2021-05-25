@@ -1,0 +1,50 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;700;900&display=swap');
+
+
+/* VARIABLES */
+$primary: #FF2E63;
+$dark: #1D2951;
+$light: #EAEAEA;
+$accent: #08D9D6;
+
+* {
+  font-family: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+b, a {
+  color: $accent;
+  font-weight: 700;
+}
+
+a:hover {
+  color: $accent;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins';
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 64px;
+}
+
+h2, h3 {
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 34px;
+}

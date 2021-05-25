@@ -1,0 +1,51 @@
+@import './App.scss';
+
+#navbar {
+    color: $light;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    padding: 16px 32px;
+    box-sizing: border-box;
+}
+
+.transparent {
+    background: transparent;
+}
+
+.solid {
+    background: $dark;
+}
+
+.brand {
+    font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
+    a {
+        text-decoration: none;
+        h1 {
+            font-size: 32px;
+            color: $light;
+        }
+    }
+}
+
+.collapseable {
+    display: flex;
+    flex-direction: row;
+    .nav-item {
+        margin-left: 29px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+            text-decoration: none;
+            font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
+            font-weight: 700;
+            color: $light;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}

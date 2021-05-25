@@ -1,0 +1,18 @@
+@import './App.scss';
+
+.btn {
+    padding: 12px 24px;
+    background: $accent;
+    color: $dark !important;
+    font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif;
+    font-weight: 700;
+    border-radius: 32px;
+    text-decoration: none;
+    display: inline-block;
+    &:hover {
+        color: $dark !important;
+    }
+    svg {
+        margin-left: 6px;
+    }
+}
