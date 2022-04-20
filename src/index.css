@@ -1,3 +1,23 @@
+:root {
+  --dark: #1D2951;
+  --light: #EAEAEA;
+  --lightest: #fff;
+  --light-secondary: #7483B4;
+  --lightblue: #E6F5F5;
+  --background-primary: var(--lightest);
+  --background-secondary: var(--lightblue);
+  --background-tertiary: var(--lightblue);
+  --border: #E4E4E4;
+  --foreground: var(--dark);
+  --foreground-primary: var(--dark);
+  --foreground-secondary: var(--dark);
+  --accent: #08D9D6;
+  --primary: #FF2E63;
+  --background-nav: rgba(255, 255, 255, 0.95);
+  --background-card: var(--lightest);
+  --highlight: var(--accent);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

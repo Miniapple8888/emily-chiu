@@ -14,7 +14,7 @@ export class SocialMedias extends Component {
             <a className="sm-logo" href="https://linkedin.com/in/emilychiu/">
                 <FontAwesomeIcon icon={faLinkedin} />
             </a>
-            <a className="sm-logo" href="#">
+            <a className="sm-logo" href="mailto:emily.chiu1@uwaterloo.ca">
                 <FontAwesomeIcon icon={faEnvelope} />
             </a>
         </div>

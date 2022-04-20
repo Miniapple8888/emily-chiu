@@ -1,3 +1,4 @@
+import React, {Component} from 'react';
 import { About } from './About';
 import './App.scss';
 import { Landing } from './Landing';

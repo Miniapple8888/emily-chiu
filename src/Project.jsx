@@ -15,7 +15,9 @@ export class Project extends Component {
     render() {
         const skillDisplay = this.state.skills.map(skill => <Skill name={skill} />)
         return <a href={this.state.github} target="_blank" rel="noreferrer" className="project">
+            <div class="project-img-container">
             <div className="project-image" style={{backgroundImage: "url(" + this.state.image + ")"}}></div>
+            </div>
             <h2>{ this.state.title }
             <a href={this.state.github} target="_blank" rel="noreferrer" className="github"><FontAwesomeIcon icon={faGithub} /></a>
             <a href={this.state.link} target="_blank" rel="noreferrer" className="link"><FontAwesomeIcon icon={faLink} /></a>

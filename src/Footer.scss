@@ -1,16 +1,17 @@
 @import './App.scss';
 
 #footer {
-    background-color: $dark;
-    color: $light;
+    background-color: var(--background-primary);
+    color: var(--foreground);
     padding: 32px 0;
     text-align: center;
     bottom: 0;
+    border-top: 2px solid var(--border);
     p {
-        font-family: 'Poppins' !important;
+        font-family: 'DM Sans';
         font-weight: 300;
         line-height: 1.6;
-        color: #b7b7b7;
+        color: var(--foreground);
         font-size: 14px;
     }
 }

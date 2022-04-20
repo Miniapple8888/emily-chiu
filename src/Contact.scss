@@ -1,15 +1,25 @@
 @import './App.scss';
 
 #contact {
-    background: $primary;
-    color: $light;
+    background: var(--background-secondary);
+    color: var(--foreground);
     text-align: center;
     padding: 64px 0;
+    justify-content: center;
+    @media screen and (max-width: 850px) {
+        h4 {
+            max-width: 400px;
+            justify-content: center;
+            margin: auto;
+        }
+    }
     h4 {
-        font-family: 'Open Sans';
-        margin: 12px 0;
+        font-family: 'DM Sans';
+        margin: 12px auto;
     }
     .social-medias .sm-logo {
-        color: $light;
+        &:hover {
+            transition: color 0.3s;
+        }
     }
 }

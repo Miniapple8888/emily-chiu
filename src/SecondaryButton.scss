@@ -1,9 +1,13 @@
 @import './App.scss';
 
 .secondary {
-    color: $primary !important;
-    background: $dark !important;
+    color: var(--foreground);
+    background: transparent;
+    border: 2.5px solid var(--foreground);
+    transition: all 0.5s ease-in-out;
     &:hover {
-        color: $primary !important;
+        color: var(--foreground-secondary);
+        border-color: var(--foreground-secondary);
+        transition: all 0.5s ease-in-out;
     }
 }

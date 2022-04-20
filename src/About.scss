@@ -1,42 +1,84 @@
 @import './App.scss';
 
+$animate-hover: all 0.2s ease-in-out;
+
 #about {
-    background: $dark;
-    color: $light;
+    background: var(--background-secondary);
+    display: flex;
+    justify-content: center;
+}
+
+#about-container {
+    color: var(--foreground);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 64px 32px;
+    padding: 64px 48px;
     p {
         line-height: 1.8;
         margin-top: 0.85rem;
         margin-bottom: 0.85rem;
     }
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 850px) {
         flex-direction: column;
     }
 }
 
 .profile-description {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 525px;
     width: 50%;
-    @media screen and (max-width: 800px) {
+    max-width: 1000px;
+    position: relative;
+    p {
+        line-height: 160%;
+    }
+    .hover {
+        margin: 0 auto;
+        padding: 0 auto;
+        transition: $animate-hover;
+        position: relative;
+        z-index: 2;
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            width: 0px;
+            height: 20px;
+            margin: 5px 0 0;
+            transition: $animate-hover;
+            transition-duration: 0.75s;
+            opacity: 0;
+            background-color: var(--highlight);
+            left: 0;
+            border-radius: 10px;
+            z-index: -1;
+        }
+        &:hover {
+            cursor: pointer;
+            &:before, &:after {
+                width: 100%;
+                opacity: 1;
+            }
+        }
+    }
+    @media screen and (max-width: 850px) {
         width: 100%;
         min-width: 100%;
     }
 }
 
 .profile-img {
-    flex: 1 1 42.5%;
+    flex: 1 1 20%;
     padding-left: 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 50%;
+    margin: auto;
+    max-width: 750px;
+    padding: 32px;
     @media screen and (max-width: 800px) {
         margin-top: 48px;
         min-width: 100%;
@@ -44,23 +86,16 @@
         padding-left: 0;
     }
     .img {
-        background-image: url('./profileimg.jpg');
-        background-position-x: -130%;
-        background-size: 200%;
-        background-position-y: -200px;
-        width: 100%;
-        height: 80vh;
-        border-radius: 36px;
-        @media screen and (max-width: 1000px) {
-            background-size: cover;
-            background-position: center;
-        }
-        @media screen and (max-width: 800px) {
-            background-size: 200%;
-            background-position-x: -130%;
-            background-position-y: -120%;
-            max-height: 80vw;
-        }
+        margin: auto;
+        background-image: url('../public/profile.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 40vw;
+        height: 40vw;
+        max-width: 750px;
+        max-height: 750px;
+        border-radius: 50%;
     }
 }
 

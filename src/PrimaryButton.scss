@@ -1,9 +1,9 @@
 @import './App.scss';
 
 .primary {
-    color: #fff !important;
-    background: $primary !important;
+    color: var(--background-primary);
+    background: var(--primary);
     &:hover {
-        color: #fff !important;
+        color: var(--background-primary);
     }
 }

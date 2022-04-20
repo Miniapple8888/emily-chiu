@@ -9,10 +9,12 @@
         margin-left: 18px;
         display: block;
         text-decoration: none;
-        color: $light;
+        color: var(--foreground-secondary);
         font-size: 36px;
+        transition: color 0.3s ease-in-out;
         &:hover {
-            color: #fff;
+            color: var(--primary);
+            transition: color 0.2s ease-in-out;
         }
     }
 }

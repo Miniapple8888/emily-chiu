@@ -1,13 +1,11 @@
 @import './App.scss';
 
-$pinkish: #FFD3DE;
-
 .skill {
-    background-color: $pinkish;
-    color: $primary !important;
+    background-color: var(--background-tertiary);
+    color: var(--foreground-secondary) !important;
     margin-right: 8px; 
     margin-top: 8px;
     &:hover {
-        color: $primary !important;
+        color: var(--foreground-secondary) !important;
     }
 }

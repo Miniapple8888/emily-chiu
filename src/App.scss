@@ -1,15 +1,18 @@
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300;700;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,700;1,400;1,500;1,700&display=swap');
 
 /* VARIABLES */
 $primary: #FF2E63;
 $dark: #1D2951;
 $light: #EAEAEA;
+$lightblue: #E6F5F5;
+$border: #E4E4E4;
 $accent: #08D9D6;
 
 * {
-  font-family: 'Open Sans', 'Arial', 'Helvetica', sans-serif;
+  font-family: 'DM Sans', 'Arial', 'Helvetica', sans-serif;
+  font-weight: 400;
   font-size: 16px;
   margin: 0;
   padding: 0;
@@ -19,32 +22,51 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  color: var(--background-primary);
+}
+
 a {
   text-decoration: none;
 }
 
 b, a {
-  color: $accent;
+  color: $primary;
   font-weight: 700;
 }
 
 a:hover {
-  color: $accent;
+  color: var(--primary);
 }
 
 h1, h2, h3 {
-  font-family: 'Poppins';
+  font-family: 'DM Sans';
 }
 
 h1 {
-  font-weight: 900;
+  font-weight: 700;
   font-size: 64px;
+  color: var(--foreground-primary);
 }
 
 h2, h3 {
   font-weight: 700;
+  color: var(--foreground-primary);
 }
 
 h2 {
   font-size: 34px;
+}
+
+.dark {
+  --background-primary: #1C2541;
+  --background-secondary: var(--dark);
+  --background-tertiary: #2A3B72;
+  --foreground-primary: var(--light);
+  --foreground-secondary: #9CB3FF;
+  --foreground: var(--light-secondary);
+  --background-nav: rgba(28, 37, 65, 0.95);
+  --background-card: var(--background-secondary);
+  --border: #273150;
+  --highlight: #2A3B72;
 }

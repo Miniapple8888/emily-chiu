@@ -1,32 +1,61 @@
 @import './App.scss';
 
 .project {
-    background-color: #FAFAFA;
+    background-color: var(--background-card);
     padding: 32px;
-    color: $dark;
-    border-radius: 32px;
+    color: var(--foreground);
+    border-radius: 16px;
     flex: 0 0 49%;
+    max-width: 750px;
     margin-top: 24px;
     box-sizing: border-box;
+    border: 2.5px solid var(--border);
     position: relative;
     display: flex;
     flex-direction: column;
-    @media screen and (max-width: 760px) {
+    transition: border-color 0.5s ease-in-out;
+    @media screen and (max-width: 850px) {
         min-width: 100%;
     }
     &:hover {
-        background-color: #fff;
-        color: $dark;
+        color: var(--foreground);
+        border-color: var(--primary);
+        transition: border-color 0.5s ease-in-out;
     }
     &:hover ~ .title {
-        color: $primary;
+        color: var(--primary);
+    }
+    .project-img-container {
+        width: 100%;
+        height: 318px;
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+        display: inline-block;
     }
     .project-image {
-        height: 318px;
+        height: 100%;
         width: 100%;
         background-size: cover;
+        background-repeat: no-repeat;
         border-radius: 16px;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        -o-transition: all .5s;
+        transition: all .5s;
         background-position: center;
+    }
+    .project-img-container:hover .project-image,
+    .project-img-container:focus .project-image {
+        -ms-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+    .project-img-container:hover .project-image:before,
+    .project-img-container:focus .project-image:before {
+        display: block;
     }
     h2 {
         display: flex;
@@ -34,6 +63,11 @@
         justify-content: flex-end;
         padding-top: 12px;
         position: relative;
+        transition: color 0.2s ease-in-out;
+        &:hover {
+            color: var(--primary);
+            transition: color 0.2s ease-in-out;
+        }
     }
     p {
         line-height: 1.5;
@@ -46,13 +80,15 @@
         margin-top: auto;
     }
     .github, .link {
-        color: $dark;
+        color: var(--foreground);
         position: absolute;
         font-size: 24px;
         right: 0;
         bottom: 10px;
+        transition: color 0.2s ease-in-out;
         &:hover {
-            color: $primary;
+            color: var(--primary);
+            transition: color 0.2s ease-in-out;
         }
     }
     .github {
